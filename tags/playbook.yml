@@ -2,9 +2,14 @@
 - hosts: all
   tasks: 
       - raw: echo "task 1"
+        tags: task1 
 
       - raw: echo "task 2"
+        tags:
+                - httpd
+                - restart
 
       - raw: echo "task 3"
 
       - raw: echo "task 4"
+        tags: httpd
