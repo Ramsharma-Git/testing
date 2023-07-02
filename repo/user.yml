@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+      - user:
+          name: tony
+          state: present
+          password: "{{ redhat | password_hash('sha512') }}"
