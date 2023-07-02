@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks: 
+      - raw: echo "task 1"
+
+      - raw: echo "task 2"
+
+      - raw: echo "task 3"
+
+      - raw: echo "task 4"
