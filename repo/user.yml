@@ -5,3 +5,9 @@
           name: tony
           state: present
           password: "{{ redhat | password_hash('sha512') }}"
+
+      - user:
+          name: harry
+          state: preent
+          password: "{{ redhat | password_hash('sha512') }}"
+
