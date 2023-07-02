@@ -13,5 +13,11 @@
       - copy:
           dest: /var/www/html/index.html
           content: "welcome"
+        notify: restart httpd
+     
 
-      
+  handlers:
+      - name: restart httpd
+        service: 
+               name: httpd
+               state: restarted 
