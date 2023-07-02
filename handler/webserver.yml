@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+      - yum:
+          name: httpd
+          state: present
+
+      - service: 
+          name: httpd
+          state: started
+          enabled: yes
+
+      - copy:
+          dest: /var/www/html/index.html
+          content: "welcome"
+
+      
